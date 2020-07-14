@@ -47,7 +47,6 @@
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.provider.MediaStore.RECORD_SOUND" />
-                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -72,28 +71,6 @@
 
         <!-- Screen recorder overlay -->
         <service android:name=".screen.OverlayService" />
-
-        <!-- QS Tiles -->
-        <service
-            android:name=".tiles.ScreenRecordTile"
-            android:enabled="true"
-            android:icon="@drawable/ic_action_screen_record"
-            android:label="@string/screen_notification_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE" />
-            </intent-filter>
-        </service>
-        <service
-            android:name=".tiles.SoundRecordTile"
-            android:enabled="true"
-            android:icon="@drawable/ic_action_sound_record"
-            android:label="@string/sound_notification_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE" />
-            </intent-filter>
-        </service>
 
         <!-- File provider -->
         <provider
